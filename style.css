@@ -1,0 +1,111 @@
+/* Grey Heyron – gemeinsame Gestaltung aller Seiten.
+   Farben und Typografie wie in der partie-App: Creme #f8f5f1,
+   Text #2f2f2f, abgerundete Systemschrift. */
+
+:root {
+    --creme: #f8f5f1;
+    --text: #2f2f2f;
+    --leise: #8a8a8a;
+    --linie: #e5e0d9;
+}
+
+* { box-sizing: border-box; }
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0 24px 96px;
+    background: var(--creme);
+    color: var(--text);
+    font-family: ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont,
+                 "Segoe UI", Roboto, system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+main {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+header {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 48px 0 32px;
+}
+
+/* Rücksprung zur Projektseite, klein und zurückhaltend */
+.zurueck {
+    display: inline-block;
+    margin-bottom: 24px;
+    color: var(--leise);
+    text-decoration: none;
+    font-weight: 600;
+}
+.zurueck:hover { color: var(--text); }
+
+h1 {
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 1.15;
+    margin: 0;
+}
+
+h2 {
+    font-size: 17px;
+    font-weight: 600;
+    margin: 40px 0 8px;
+}
+
+p { margin: 0 0 16px; }
+
+ul {
+    margin: 0 0 16px;
+    padding-left: 20px;
+}
+li { margin-bottom: 4px; }
+
+a { color: var(--text); }
+
+/* Adressblöcke: Zeilenumbrüche stehen so im Text */
+.adresse {
+    white-space: pre-line;
+    margin: 0 0 16px;
+}
+
+/* Verweisliste auf der Projektseite */
+.links {
+    list-style: none;
+    padding: 0;
+    margin: 32px 0 0;
+    border-top: 1px solid var(--linie);
+}
+.links li {
+    margin: 0;
+    border-bottom: 1px solid var(--linie);
+}
+.links a {
+    display: block;
+    padding: 16px 0;
+    text-decoration: none;
+    font-weight: 600;
+}
+.links a:hover { color: var(--leise); }
+
+footer {
+    max-width: 640px;
+    margin: 64px auto 0;
+    padding-top: 24px;
+    border-top: 1px solid var(--linie);
+    color: var(--leise);
+    font-size: 15px;
+}
+footer a { color: var(--leise); }
+
+@media (max-width: 520px) {
+    h1 { font-size: 30px; }
+    header { padding: 32px 0 24px; }
+}
